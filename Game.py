@@ -1,7 +1,7 @@
 import random
 def game():
   while True:
-    secret = random.randint(1, 1000)
+    number = random.randint(1, 1000)
     print("\nI'm thinking of a number between 1 and 100.")
     print("Type 'q' to quit anytime.")
     while True:
@@ -14,9 +14,9 @@ def game():
         except ValueError:
             print("Please enter a valid number or 'q' to quit.")
             continue
-        if guess < secret:
+        if guess < number:
             print("Too low! Try again.")
-        elif guess > secret:
+        elif guess > number:
             print("Too high! Try again.")
         else:
             print("Correct! You guessed the number!")
